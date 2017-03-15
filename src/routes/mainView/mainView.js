@@ -1,7 +1,7 @@
 import './mainView.css';
 import React, { Component } from 'react';
 //import link lo necesitan las otras view
-//import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import logo from '../../assets/logo.svg';
 
 class MainView extends Component {
@@ -26,6 +26,12 @@ class MainView extends Component {
 
                     </div>
                 </div>
+                <nav className="main-view__nav">
+                    <ul>
+                        <li><Link to="./artistsListView">Artists List View</Link></li>
+                    </ul>
+                </nav>
+                <footer className="main-view__footer"></footer>
             </article>
         );
     }

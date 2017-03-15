@@ -1,0 +1,79 @@
+.artists-list-view {
+  text-align: center;
+}
+.artists-list-view__logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+.artists-list-view__header {
+  background-color: #222;
+  width: 100%;
+  height: 80px;
+  padding: 5px;
+}
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.artists-list-view__title{
+	padding-left: 400px;
+	padding-right: 400px;
+	padding-top: 10px;
+	text-align: left;
+}
+.artists-list-view__search{
+	padding-left: 400px;
+	padding-right: 400px;
+	padding-top: 10px;
+}
+.artists-list-view__search-query {
+	margin-left: -60px;
+  padding-left: 25px;
+  width: 80%;
+  height: 18px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid #000000;
+}
+.artists-list-view__search:before {
+  content: '';
+  display: block;
+  width: 19px;
+  height: 17px;
+  background-image: url("../../assets/lupa.jpg");
+  background-position: -50px 0;
+  background-size: cover;
+  background-position: left;
+  position: relative;
+  top: 20px;
+  left: 18px;
+  opacity: .5;
+  z-index: 1000;
+}
+.artists-list-view__favourites{
+	padding-left: 400px;
+	padding-right: 400px;
+	padding-top: 20px;
+	text-align: left;
+}
+li {
+    display: inline-block;
+    margin: 0px 2px;
+}
+.artists-list-view__nav{
+  padding-left: 400px;
+  padding-right: 400px;
+  padding-top: 20px;
+  text-align: left;
+  text-align: left;
+}
+hr{
+  border-top: 3px solid #000000;
+}
+.artists-list-view__footer{
+  width: 100%;
+  height: 10px;
+  border-top: 3px solid #000000;
+  border-bottom: 3px solid #000000;
+}
