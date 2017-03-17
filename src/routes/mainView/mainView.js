@@ -1,6 +1,5 @@
 import './mainView.css';
 import React, { Component } from 'react';
-//import link lo necesitan las otras view
 import { Link } from 'react-router-dom';
 import logo from '../../assets/logo.svg';
 
