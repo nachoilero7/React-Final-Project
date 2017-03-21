@@ -2,87 +2,79 @@
   text-align: center;
 }
 .artist-view__logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+
   float: left;
-  width: 10%;
+  height: 30px;
+  padding-top: 20px;
 }
+
+
 .artist-view__header {
   background-color: #222;
   width: 100%;
   height: 80px;
   padding: 5px;
 }
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
 .artist-view__info{
-  padding-left: 400px;
-  padding-right: 400px;
-  padding-top: 10px;
-  padding-bottom: 15px;
+  margin-left: 40%;
   text-align: left;
   width: 68%;
   height: 100px;
 }
 .artist-view__info-logo{
-  width: 12%;
-  height: 100%;
+
   float: left;
   border: 1px solid black;
 }
 .artist-view__info-title{
   width: 42%;
   height: 100%;
-  padding-left: 120px;
 }
 .artist-view__search{
-	padding-left: 900px;
-	padding-right: 0px;
-	padding-top: 10px;
+  float:right;
 }
+
 .artist-view__search-query {
-	margin-left: -60px;
-  padding-left: 25px;
-  width: 80%;
-  height: 18px;
-  -moz-border-radius: 5px;
+  text-align: left;
+  background: url("../../assets/search.png") no-repeat 0px 0px;
+  background-color: #fff;
+  padding-left:20px;
+  padding-top: 0;
+  margin-right: 40px;
+    -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
   border: 1px solid #000000;
+  text-decoration-color: black;
 }
+
 .artist-view__search:before {
   content: '';
   display: block;
   width: 19px;
-  height: 17px;
-  background-image: url("../../assets/lupa.jpg");
+  height: 25px;
   background-position: -50px 0;
   background-size: cover;
   background-position: left;
   position: relative;
-  top: 20px;
-  left: 6px;
   opacity: .5;
   z-index: 1000;
 }
 .artist-view__results{
-	padding-left: 400px;
-	padding-right: 400px;
-	padding-top: 10px;
-  padding-bottom: 10px;
-	text-align: left;
+  text-align: center;
 }
-li {
+
+
+ul li {
     display: inline-block;
     margin: 0px 2px;
+    color: white; 
+}
+
+.links{
+  color: white;
 }
 .artist-view__nav{
-  padding-left: 400px;
-  padding-right: 400px;
-  padding-top: 0px;
-  text-align: left;
   text-align: left;
 }
 hr{

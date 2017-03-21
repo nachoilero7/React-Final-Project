@@ -1,68 +1,64 @@
 import './artistsListView.css';
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../../assets/logo.svg';
+import logogif from '../../assets/spotify-logo2.gif';
+import Search from '../components/Search';
+
+var qstr;
 
 class ArtistsListView extends Component {
+
+   constructor(props) {
+        super(props);
+        this.state = {
+            artistName: '',
+            artistImage: '',
+            artistId: '',
+            value:'',
+        };
+    };
+
+    componentWillMount(){
+        qstr = this.props.location.search.substring(7);
+
+        this.state.value = qstr;
+    }
+
     render() {
+        const{
+            artistName,
+            artistImage,
+            artistId,
+            infoStatus,
+            value
+        } = this.state;
+
+        let data = null;
+        
         return (
-            <article className="artists-list-view">
-                <header className="artists-list-view__header">
-                    <img src={logo} className="artists-list-view__logo" alt="logo" />
+            <article className="list-article-principal">
+             <div className="list-inside">
+                <header className="list-view__title">
+                    <p className="list-title">Artists</p>
                 </header>
-                <header className="artists-list-view__title">
-                    <h1>Artists</h1>
-                    <p>You are currently searching: $(".main-view__search-query").val();</p>
-                </header>
-                <div className="artists-list-view__search">
-                    <input type="text" className="artists-list-view__search-query" placeholder="Search for your favorite artist here..." />
-                </div>
-                <nav className="artists-list-view__nav">
-                    <ul>
-                        <li><Link to="./mainView">Main View</Link></li>
-                        <li>></li>
-                        <li><Link to="./artistsListView">Artists List View</Link></li>
-                        <li>></li>
-                        <li><Link to="./artist">Artist</Link></li>
-                    </ul>
-                </nav>
-                <hr/>
-                <div className="artists-list-view__results">
-                    <div className="box">
-                        <div className="box-img">
-                            <img src="" className="imgArtist" />
-                        </div>
-                        <div className="box-title">
-                            <h4 className="box-nombre">Artist</h4>
-                        </div>
-                    </div>
-                    <div className="box">
-                        <div className="box-img">
-                            <img src="" className="imgArtist" />
-                        </div>
-                        <div className="box-title">
-                            <h4 className="box-nombre">Artist</h4>
-                        </div>
-                    </div>
-                    <div className="box">
-                        <div className="box-img">
-                            <img src="" className="imgArtist" />
-                        </div>
-                        <div className="box-title">
-                            <h4 className="box-nombre">Artist</h4>
-                        </div>
-                    </div>
-                    <div className="box">
-                        <div className="box-img">
-                            <img src="" className="imgArtist" />
-                        </div>
-                        <div className="box-title">
-                            <h4 className="box-nombre">Artist</h4>
-                        </div>
-                    </div>
-                </div>
-                <footer className="artists-list-view__footer"></footer>
-            </article>
+                <Search value={this.state.value}/>
+
+
+            </div> 
+
+            <nav className="list-view__nav">
+                <ul>
+                    <li><Link className="links" to="./homeView">Home View</Link></li>
+                    <li>></li>
+                    <li><Link className="links" to="./artistsListView">Artist List View</Link></li>
+                </ul>
+            </nav>
+
+            <footer className="list-view__footer">
+                <img src={logogif} className="list-view__logo" alt="logo" />
+            </footer>
+             
+           </article>
         );
     }
 }

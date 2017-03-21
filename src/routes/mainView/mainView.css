@@ -1,65 +1,24 @@
 .main-view {
   text-align: center;
 }
+
 .main-view__logo {
-  animation: App-logo-spin infinite 20s linear;
+
   height: 80px;
 }
+
 .main-view__header {
-  background-color: #222;
-  width: 100%;
-  height: 80px;
-  padding: 5px;
+  background-color: #000;
+  height: 170px;
+  padding: 20px;
+  color: white;
 }
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.main-view__footer {
+	background-color: #fff;
+	
+
 }
-.main-view__title{
-	padding-left: 400px;
-	padding-right: 400px;
-	padding-top: 10px;
-	text-align: left;
-}
-.main-view__search{
-	padding-left: 400px;
-	padding-right: 400px;
-	padding-top: 10px;
-}
-.main-view__search-query {
-	margin-left: -60px;
-    padding-left: 25px;
-    width: 80%;
-    height: 18px;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-    border: 1px solid #000000;
-}
-.main-view__search:before {
-    content: '';
-    display: block;
-    width: 19px;
-    height: 17px;
-    background-image: url("../../assets/lupa.jpg");
-    background-position: -50px 0;
-    background-size: cover;
-    background-position: left;
-    position: relative;
-    top: 20px;
-    left: 18px;
-    opacity: .5;
-    z-index: 1000;
-}
-.main-view__favourites{
-	padding-left: 400px;
-	padding-right: 400px;
-	padding-top: 20px;
-	text-align: left;
-}
-.main-view__footer{
-	width: 100%;
-	height: 10px;
-	border-top: 3px solid #000000;
-	border-bottom: 3px solid #000000;
+
+.links{
+	color: white;
 }
