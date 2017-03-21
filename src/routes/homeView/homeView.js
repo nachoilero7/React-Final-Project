@@ -1,5 +1,6 @@
 import './homeView.css';
 import React, { Component } from 'react';
+//import link lo necesitan las otras view
 import { Link } from 'react-router-dom';
 import logogif from '../../assets/spotify-logo2.gif';
 

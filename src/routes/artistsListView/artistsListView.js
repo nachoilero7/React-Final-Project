@@ -15,13 +15,15 @@ class ArtistsListView extends Component {
             artistImage: '',
             artistId: '',
             value:'',
+            url:'',
         };
     };
 
     componentWillMount(){
         qstr = this.props.location.search.substring(7);
-
         this.state.value = qstr;
+        this.state.url = `https://api.spotify.com/v1/search?q=${encodeURIComponent(qstr)}&type=artist`;
+        console.log("URL ARTISTLIST "+this.state.url);
     }
 
     render() {
@@ -30,7 +32,8 @@ class ArtistsListView extends Component {
             artistImage,
             artistId,
             infoStatus,
-            value
+            value,
+            url
         } = this.state;
 
         let data = null;
@@ -41,10 +44,11 @@ class ArtistsListView extends Component {
                 <header className="list-view__title">
                     <p className="list-title">Artists</p>
                 </header>
-                <Search value={this.state.value}/>
-
+                <Search value={this.state.value} url={this.state.url}/>
 
             </div> 
+            <hr/>
+            <div id="resultado-artista" className="list-view__results" />
 
             <nav className="list-view__nav">
                 <ul>

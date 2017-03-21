@@ -1,5 +1,6 @@
 import './albumView.css';
 import React, { Component } from 'react';
+//import link lo necesitan las otras view
 import { Link } from 'react-router-dom';
 import logogif from '../../assets/spotify-logo2.gif';
 import logo from '../../assets/spotify-logo-.jpg';
@@ -25,6 +26,7 @@ class AlbumView extends Component {
     componentWillMount(){
         qstr = this.props.location.search.substring(7);
         this.state.value = qstr;
+        this.state.url = `https://api.spotify.com/v1/albums/${encodeURIComponent(qstr)}/tracks`;
     }
 
     handleChange(event) { 
@@ -49,41 +51,42 @@ class AlbumView extends Component {
         } = this.state;
 
         return (
-            <article className="album-article-principal">
-                 <header className="artist-view__header">
-                    <div className="artist-view__header-logo">
-                        <img src={logo} className="artist-view__logo" alt="logo" />
+             <article className="album-view">
+                <header className="album-view__header">
+                    <div className="album-view__header-logo">
+                        <img src={logo} className="album-view_logoPrinc" alt="logo" />
                     </div>
-                    <div className="artist-view__search">
-                        <form name="myForm" action="/artistsListView" onSubmit={this.handleChange} method="get">
-                           <input type="text" id="artista" className="home-view__search-query" onChange={this.acept} placeholder="Type the name of your favorite artist..." /> 
+                    <div className="album-view__search">
+                         <form name="myForm" action="/artistsListView" onSubmit={this.handleChange} method="get">
+                           <input type="text" id="artista" className="album-view__search-query" onChange={this.acept} placeholder="Type the name of your favorite artist..." /> 
                            <input type="submit" value="search"/>
                         </form>
                      </div>
                 </header>
-                <div className="artist-view__info">
-                    <div className="artist-view__info-logo">
-                        <img src="aca va el path de la imagen" className="logoArtist" />
+                <div className="album-view__info">
+                    <div className="album-view__info-logo">
+                        <img id="img-album-tracks" src="aca va el path de la imagen" className="logoArtist" />
                     </div>
-                    <div className="artist-view__info-title">
-                        <h2 className="box-nombre-title">Nombre Artista</h2>
-                        <h4 className="box-nombre-title">Genero</h4>
+                    <div className="album-view__info-title">
+                        <h2 id="album-box-nombre-title"></h2>
+                        <h4 id="album-box-nombre-title"></h4>
                     </div>
                 </div>
-                <hr/>
-                <div className="album-view__results">
-                    <h2>Aca van los resultados de la busqueda!</h2>
                 
-                </div>
+                <Search value={this.state.value} url={this.state.url} />
+                <hr/>
+                
+                <div id="resultado-tracks" className="list-view__results" />
+
                 <nav className="album-view__nav">
                     <ul>
                         <li><Link className="links" to="./homeView">Home View</Link></li>
                         <li>></li>
-                        <li><Link className="links"  to="./artistsListView">Artist List View</Link></li>
+                        <li><Link className="links"  to="./artistsListView">Artists List View</Link></li>
                         <li>></li>
-                        <li><Link className="links" to="./artistView">Nombre Artista</Link></li>
+                        <li><Link className="links" to="./artistView">Artist</Link></li>
                         <li>></li>
-                        <li><Link className="links" to="./albumView">Nombre Album</Link></li>
+                        <li><Link className="links" to="./albumView">Album</Link></li>
                     </ul>
                 </nav>
                 <footer className="album-view__footer">
