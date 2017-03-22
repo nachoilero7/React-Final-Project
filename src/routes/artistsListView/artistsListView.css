@@ -1,40 +1,34 @@
-h1{
-    color: white;
-   font: 50px sans-serif;
-   font-weight: bold;
-   text-align: center;
-   float: center;
+h1 {
+  color: white;
+  font: 50px sans-serif;
+  font-weight: bold;
+  text-align: center;
+  float: center;
 }
-
-.list-inside{
+.list-inside {
   margin: 50px 50px 50px 50px;
 }
-
 .list-view {
   text-align: center;
 }
 .list-view__logo {
-   border: none;
+  border: none;
   height: 80px;
 }
-
-.list-title{
+.list-title {
   text-align: left;
   color: white;
   font-size: 40px;
 }
-
-
 .list-view__header {
   background-color: #222;
   width: 100%;
   height: 80px;
 }
-
-.list-view__title{
+.list-view__title {
   text-align: center;
 }
-.list-view__s{
+.list-view__s {
   text-align: left;
 }
 .list-view__search-query {
@@ -51,62 +45,169 @@ h1{
   border: 1px solid #000000;
   text-decoration-color: black;
 }
-
-.list-view__favourites{
+.list-view__favourites {
   text-align: left;
 }
-
 ul li {
-    display: inline-block;
-    margin: 0px 2px;
-    color: white; 
+  display: inline-block;
+  margin: 0px 2px;
+  color: white; 
 }
-
-.links{
+.links {
   color: white;
 }
-
-hr{
+hr {
   border-top: 3px solid #000000;
 }
-.list-view__footer{
-
+.list-view__footer {
   background-color: #000;
   width: 100%;
   height: 80px;
-  
 }
-.list-view__nav{
+.list-view__nav {
   text-align: left;
 }
-
-.list-text{
-   text-align: left;
+.list-text {
+  text-align: left;
   color: black;
   font-size: 20px;
   font-style: bold;
 }
-
-.cuerpo{
+.cuerpo {
   text-align: center;
 }
 /*---------------------*/
-
-.artist-view__results{
+.artist-view__results {
   text-align: center;
 }
-.box-img{
+.box-artist {
+  display: inline-block;
+  width: 45%;
+  height: 90px;
+  border: 1px solid black;
+  margin-right: 9px;
+  margin-bottom: 5px;
+  background-color: white;
+}
+.box-artist-img {
+  height: 87%;
+  width: 40%;
+  border: 1px solid black;
+  float: left;
+  margin: 5px;
+}
+.box-artist img {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+.box-artist-title {
+  height: 87%;
+  width: 51%;
+  float: left;
+  margin-top: 5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  margin-left: 1px;
+}
+h4 {
+  font-size: 20px;
+  text-align: left;
+  margin: 10px;
+}
+
+@media screen and (device-width: 320px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 2){
+  h1 {
+    color: white;
+    font: 50px sans-serif;
+    font-weight: bold;
+    text-align: center;
+    float: center;
+  }
+
+  .list-inside {
+    margin: 50px 50px 50px 50px;
+  }
+  .list-view {
+    text-align: center;
+  }
+  .list-view__logo {
+    border: none;
+    height: 80px;
+  }
+  .list-title {
+    text-align: left;
+    color: white;
+    font-size: 40px;
+  }
+  .list-view__header {
+    background-color: #222;
+    width: 100%;
+    height: 80px;
+  }
+  .list-view__title {
+    text-align: center;
+  }
+  .list-view__s {
+    text-align: left;
+  }
+  .list-view__favourites {
+    text-align: left;
+  }
+  ul li {
+    display: inline-block;
+    margin: 0px 2px;
+    color: white; 
+  }
+  .links {
+    color: white;
+  }
+  hr {
+    border-top: 3px solid #000000;
+  }
+  .list-view__footer {
+    background-color: #000;
+    width: 100%;
+    height: 80px;
+  }
+  .list-view__nav {
+    text-align: left;
+  }
+  .list-text {
+    text-align: left;
+    color: black;
+    font-size: 20px;
+    font-style: bold;
+  }
+  .cuerpo {
+    text-align: center;
+  }
+  /*---------------------*/
+  .artist-view__results {
+    text-align: center;
+  }
+  .box-artist {
+    display: inline-block;
+    width: 45%;
+    height: 90px;
+    border: 1px solid black;
+    margin-right: 9px;
+    margin-bottom: 5px;
+    background-color: white;
+  }
+  .box-artist-img {
     height: 87%;
-    width: 50%;
+    width: 40%;
     border: 1px solid black;
     float: left;
-}
-.box img{
+    margin: 5px;
+  }
+  .box-artist img {
     height: 100%;
     width: 100%;
     text-align: center;
-}
-.box-title{
+  }
+  .box-artist-title {
     height: 87%;
     width: 51%;
     float: left;
@@ -114,9 +215,10 @@ hr{
     margin-right: 5px;
     margin-bottom: 5px;
     margin-left: 1px;
-}
-h4{
+  }
+  h4 {
     font-size: 20px;
     text-align: left;
     margin: 10px;
+  }
 }

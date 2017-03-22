@@ -12,12 +12,7 @@ class MainView extends Component {
                     <h2>Welcome to Spotify Client</h2>
                 </header>
                 <nav className="main-view__nav">
-                    <ul>
-                        <li><Link  className="links" to="/homeView">Home</Link></li>
-                        <li><Link  className="links" to="/artistsListView">Search Artist</Link></li>
-                        <li><Link  className="links" to="/artistView">Artist</Link></li>
-                        <li><Link  className="links" to="/albumView">Album</Link></li>
-                    </ul>
+                    <li><Link  className="links" to="/homeView">Home</Link></li>
                 </nav>
             </article>
         );

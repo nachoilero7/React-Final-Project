@@ -1,12 +1,9 @@
 .main-view {
   text-align: center;
 }
-
 .main-view__logo {
-
   height: 80px;
 }
-
 .main-view__header {
   background-color: #000;
   height: 170px;
@@ -14,11 +11,29 @@
   color: white;
 }
 .main-view__footer {
-	background-color: #fff;
-	
-
+  background-color: #fff;
+}
+.links{
+  color: white;
 }
 
-.links{
-	color: white;
+@media screen and (device-width: 320px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 2) {
+  .main-view {
+    text-align: center;
+  }
+  .main-view__logo {
+    height: 80px;
+  }
+  .main-view__header {
+    background-color: #000;
+    height: 170px;
+    padding: 20px;
+    color: white;
+  }
+  .main-view__footer {
+  	background-color: #fff;
+  }
+  .links{
+  	color: white;
+  }
 }

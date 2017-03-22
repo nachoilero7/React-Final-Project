@@ -1,6 +1,5 @@
 import './albumView.css';
-import React, { Component } from 'react';
-//import link lo necesitan las otras view
+import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 import logogif from '../../assets/spotify-logo2.gif';
 import logo from '../../assets/spotify-logo-.jpg';
@@ -40,7 +39,6 @@ class AlbumView extends Component {
     }
 
     render() {
-        
         const{
             artistName,
             artistImage,
@@ -57,11 +55,11 @@ class AlbumView extends Component {
                         <img src={logo} className="album-view_logoPrinc" alt="logo" />
                     </div>
                     <div className="album-view__search">
-                         <form name="myForm" action="/artistsListView" onSubmit={this.handleChange} method="get">
+                        <form name="myForm" action="/artistsListView" onSubmit={this.handleChange} method="get">
                            <input type="text" id="artista" className="album-view__search-query" onChange={this.acept} placeholder="Type the name of your favorite artist..." /> 
                            <input type="submit" value="search"/>
                         </form>
-                     </div>
+                    </div>
                 </header>
                 <div className="album-view__info">
                     <div className="album-view__info-logo">
@@ -72,21 +70,20 @@ class AlbumView extends Component {
                         <h4 id="album-box-nombre-title"></h4>
                     </div>
                 </div>
-                
                 <Search value={this.state.value} url={this.state.url} />
                 <hr/>
-                
                 <div id="resultado-tracks" className="list-view__results" />
-
                 <nav className="album-view__nav">
                     <ul>
+                        <li><Link className="links" to="./mainView">Main View</Link></li>
+                        <li>></li>
                         <li><Link className="links" to="./homeView">Home View</Link></li>
                         <li>></li>
                         <li><Link className="links"  to="./artistsListView">Artists List View</Link></li>
                         <li>></li>
                         <li><Link className="links" to="./artistView">Artist</Link></li>
                         <li>></li>
-                        <li><Link className="links" to="./albumView">Album</Link></li>
+                        <li>Album</li>
                     </ul>
                 </nav>
                 <footer className="album-view__footer">

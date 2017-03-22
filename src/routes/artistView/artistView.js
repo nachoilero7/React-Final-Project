@@ -1,6 +1,5 @@
 import './artistView.css';
 import React, { Component } from 'react';
-//import link lo necesitan las otras view
 import { Link } from 'react-router-dom';
 import logogif from '../../assets/spotify-logo2.gif';
 import logo from '../../assets/spotify-logo-.jpg';
@@ -24,7 +23,7 @@ class ArtistView extends Component {
         this.acept = this.acept.bind(this);
     };
 
-    componentWillMount(){
+    componentWillMount() {
         qstr = this.props.location.search.substring(7);
         this.state.value = qstr;
         this.state.url = `https://api.spotify.com/v1/artists/${encodeURIComponent(qstr)}/albums`;
@@ -36,7 +35,7 @@ class ArtistView extends Component {
         event.preventDefault();
     }
  
-    acept(event){
+    acept(event) {
         this.setState({value: event.target.value});
     }
 
@@ -51,7 +50,6 @@ class ArtistView extends Component {
             url
         } = this.state;
 
-
         return (
             <article className="artist-view">
                 <header className="artist-view__header">
@@ -59,37 +57,37 @@ class ArtistView extends Component {
                         <img src={logo} className="artist-view_logoPrinc" alt="logo" />
                     </div>
                     <div className="artist-view__search">
-                         <form name="myForm" action="/artistsListView" onSubmit={this.handleChange} method="get">
-                           <input type="text" id="artista" className="artist-view__search-query" onChange={this.acept} placeholder="Type the name of your favorite artist..." /> 
-                           <input type="submit" value="search"/>
+                        <form name="myForm" action="/artistsListView" onSubmit={this.handleChange} method="get">
+                            <input type="text" id="artista" className="artist-view__search-query" onChange={this.acept} placeholder="Type the name of your favorite artist..." /> 
+                            <input type="submit" value="search"/>
                         </form>
                      </div>
                 </header>
                 <div className="artist-view__info">
                     <div className="artist-view__info-logo">
-                        <img id="img-artist-album" src="aca va el path de la imagen" className="logoArtist" />
+                        <img id="img-artist-album" src={this.state.artistImage} className="logoArtist" />
                     </div>
                     <div className="artist-view__info-title">
-                        <h2 id="artist-box-nombre-title"></h2>
-                        <h4 id="artist-box-nombre-title"></h4>
+                        <h2 id="artist-box-nombre-title">{this.state.artistName}</h2>
+                        <h4 id="artist-box-nombre-title">{this.state.genero}</h4>
                     </div>
                 </div>
-                
-                <Search value={this.state.value} url={this.state.url} />
+                <div>
+                    <Search value={this.state.value} url={this.state.url} />
                 <hr/>
-                
                 <div id="resultado-album" className="list-view__results" />
-                
+                </div>
                 <nav className="artist-view__nav">
                     <ul>
                         <li><Link className="links" to="./mainView">Main View</Link></li>
                         <li>></li>
+                        <li><Link className="links" to="./homeView">Home View</Link></li>
+                        <li>></li>
                         <li><Link className="links" to="./artistsListView">Artists List View</Link></li>
                         <li>></li>
-                        <li><Link className="links" to="./artist">Artist</Link></li>
+                        <li>Artist</li>
                     </ul>
                 </nav>
-
                 <footer className="artist-view__footer">
                      <img src={logogif} className="home-view__logo" alt="logo" />
                 </footer>
